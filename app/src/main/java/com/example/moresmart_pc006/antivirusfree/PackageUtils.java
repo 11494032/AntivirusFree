@@ -12,7 +12,7 @@ public class PackageUtils {
     /**
      * 返回版本号
      * @param context
-     * @return
+     * @return 版本号
      */
 
     public static String getVersionName(Context context )
@@ -36,7 +36,7 @@ public class PackageUtils {
     /**
      * 获取本地的版本号
      * @param context
-     * @return
+     * @return 版本号
      */
     public static int getVersionCode( Context context)
     {
