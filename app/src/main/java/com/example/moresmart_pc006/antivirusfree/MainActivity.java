@@ -2,17 +2,20 @@ package com.example.moresmart_pc006.antivirusfree;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.database.DataSetObserver;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -70,9 +73,28 @@ public class MainActivity extends Activity {
         gvHome = (GridView) findViewById( R.id.gv_home );
         String[] from = new String[]{"image", "title"};
         int[] to = new int[]{ R.id.iv_item,R.id.tv_item};
-//Context context, List<? extends Map<String, ?>> data, int resource, String[] from, int[] to
+
         sim_adapter = new SimpleAdapter( this,data_list,R.layout.home_list_item,from,to);
         gvHome.setAdapter( sim_adapter );
+
+        gvHome.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                System.out.println(i);
+                switch( i )
+                {
+                    case 8:
+                        //设置中心
+                       // Toast.makeText(getApplicationContext(),"sss",Toast.LENGTH_LONG).show();
+                        startActivity( new Intent(MainActivity.this,SettingsActivity.class));
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+
     }
 
 

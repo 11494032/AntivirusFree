@@ -5,14 +5,9 @@
     android:layout_height="match_parent">
 
     <TextView
+        style="@style/TitleTextView"
         android:id="@+id/tv_all"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="功能列表"
-        android:background="#8866ff00"
-        android:textSize="22sp"
-        android:gravity="center"
-        android:textColor="@color/black">
+        android:text="功能列表">
     </TextView>
 
     <TextView
