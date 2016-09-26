@@ -5,8 +5,37 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/tv_all"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="功能列表"
+        android:background="#8866ff00"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="@color/black">
+    </TextView>
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="nihao">
-    </TextView>
+        android:text="欢迎使用安全卫士，安全卫士为你护航，有了安全卫士，腰不疼了，脚不酸了，办事情效率高了"
+        android:textSize="20sp"
+        android:singleLine="true"
+
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"
+        android:ellipsize="marquee"
+
+        />
+    <GridView
+        android:id="@+id/gv_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:numColumns="3">
+    </GridView>
+
+
 </LinearLayout>
