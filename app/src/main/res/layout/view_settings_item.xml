@@ -7,14 +7,11 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:paddingTop="8dp"
-    android:onClick="autoDate"
-    android:clickable="true"
     android:paddingBottom="8dp">
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="自动更新"
         android:textSize="20sp"
         android:textColor="@color/black"/>
 
@@ -23,12 +20,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_title"
-        android:text="自动更新已经开启"
         android:textSize="15sp"
         android:textColor="#a000"/>
 
     <CheckBox
         android:id="@+id/cb_status"
+        android:clickable="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

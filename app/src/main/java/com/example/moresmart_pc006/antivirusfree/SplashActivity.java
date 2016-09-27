@@ -3,6 +3,7 @@ package com.example.moresmart_pc006.antivirusfree;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -30,6 +31,8 @@ public class SplashActivity extends Activity {
     private String downloadURL = null;
     private String desc = null;
 
+    private SharedPreferences sp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +54,14 @@ public class SplashActivity extends Activity {
         textView.setText( R.string.current_version + PackageUtils.getVersionName(this));
         localVersion = PackageUtils.getVersionCode(this);
 
-        checkVersion();
+        sp = getSharedPreferences("config", MODE_PRIVATE );
+        boolean is_update = sp.getBoolean("is_update",true);
+        if( is_update )
+             checkVersion();
+        else
+        {
+            loadMainUI();
+        }
 
     }
 
