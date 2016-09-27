@@ -12,10 +12,14 @@ import android.widget.TextView;
  */
 public class SettingsItemView extends RelativeLayout {
 
-
+     private static final String  NAMESPACE = "http://schemas.android.com/apk/res/com.example.moresmart_pc006.antivirusfree";
     private TextView tv_title;
     private TextView tv_desc;
     private CheckBox cb_status;
+
+    private  String title;
+    private  String desc_on;
+    private  String desc_off;
 
     public SettingsItemView(Context context) {
         super(context);
@@ -24,6 +28,10 @@ public class SettingsItemView extends RelativeLayout {
 
     public SettingsItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
+         title = attrs.getAttributeValue(NAMESPACE,"stitle");
+         desc_on = attrs.getAttributeValue(NAMESPACE,"desc_on");
+         desc_off = attrs.getAttributeValue(NAMESPACE,"desc_off");
+
         initView();
     }
 
@@ -39,6 +47,8 @@ public class SettingsItemView extends RelativeLayout {
         tv_title = (TextView) findViewById( R.id.tv_title);
         tv_desc = (TextView) findViewById( R.id.tv_desc );
         cb_status = (CheckBox)findViewById( R.id.cb_status );
+
+        set_title( title );
 
     }
 
@@ -60,5 +70,9 @@ public class SettingsItemView extends RelativeLayout {
     public void set_check( boolean check)
     {
         cb_status.setChecked( check );
+        if( check )
+            setTv_desc(desc_on);
+        else
+            setTv_desc(desc_off);
     }
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingsItemView">
+        <attr name="stitle" format="string">自动跟新设置</attr>
+        <attr name="desc_on" format="string">自动跟新已经开启</attr>
+        <attr name="desc_off" format="string">自动跟新已经关闭</attr>
+    </declare-styleable>
+</resources>

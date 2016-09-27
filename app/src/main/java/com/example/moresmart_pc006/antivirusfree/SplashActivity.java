@@ -56,8 +56,10 @@ public class SplashActivity extends Activity {
 
         sp = getSharedPreferences("config", MODE_PRIVATE );
         boolean is_update = sp.getBoolean("is_update",true);
-        if( is_update )
-             checkVersion();
+
+        if( is_update ) {
+            checkVersion();
+        }
         else
         {
             loadMainUI();

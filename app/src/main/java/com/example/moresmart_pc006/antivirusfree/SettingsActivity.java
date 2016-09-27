@@ -26,16 +26,16 @@ public class SettingsActivity extends Activity {
         sivUpdate = (SettingsItemView) findViewById( R.id.siv_update);
 
         boolean is_update = sp.getBoolean("is_update",true );
-        sivUpdate.set_title("自动跟新设置");
+ //       sivUpdate.set_title("自动跟新设置");
 
         if( is_update )
         {
-            sivUpdate.setTv_desc("自动跟新已经开启");
+         //   sivUpdate.setTv_desc("自动跟新已经开启");
             sivUpdate.set_check( true );
         }
         else
         {
-            sivUpdate.setTv_desc( "自动跟新已经关闭" );
+         //   sivUpdate.setTv_desc( "自动跟新已经关闭" );
             sivUpdate.set_check( false );
         }
         sivUpdate.setOnClickListener(new View.OnClickListener() {
@@ -43,12 +43,12 @@ public class SettingsActivity extends Activity {
             public void onClick(View view) {
 
                 if (sivUpdate.get_check_statue()) {
-                    sivUpdate.setTv_desc("自动跟新已经关闭");
+                 //   sivUpdate.setTv_desc("自动跟新已经关闭");
                     sivUpdate.set_check(false);
                     sp.edit().putString("is_update", "false").commit();
 
                 } else {
-                    sivUpdate.setTv_desc("自动跟新已经开启");
+               //     sivUpdate.setTv_desc("自动跟新已经开启");
                     sivUpdate.set_check(true);
                     sp.edit().putString("is_update", "true").commit();
                 }

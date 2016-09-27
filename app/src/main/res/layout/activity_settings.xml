@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ityxl="http://schemas.android.com/apk/res/com.example.moresmart_pc006.antivirusfree"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,7 +11,10 @@
     <com.example.moresmart_pc006.antivirusfree.SettingsItemView
         android:id="@+id/siv_update"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        ityxl:stitle="自动跟新设置"
+        ityxl:desc_on="自动跟新设置已开启"
+        ityxl:desc_off="自动跟新设置已关闭">
 
     </com.example.moresmart_pc006.antivirusfree.SettingsItemView>
 </LinearLayout>
