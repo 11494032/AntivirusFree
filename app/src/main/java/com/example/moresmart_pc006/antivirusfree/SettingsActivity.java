@@ -21,10 +21,10 @@ public class SettingsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        sp = getSharedPreferences("config",MODE_PRIVATE);
+        sp = getSharedPreferences("config",Activity.MODE_PRIVATE);
         setContentView( R.layout.activity_settings);
         sivUpdate = (SettingsItemView) findViewById( R.id.siv_update);
-
+      //  boolean is_update = false;
         boolean is_update = sp.getBoolean("is_update",true );
  //       sivUpdate.set_title("自动跟新设置");
 

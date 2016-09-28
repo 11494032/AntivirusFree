@@ -17,7 +17,7 @@ public class SettingsItemView extends RelativeLayout {
     private TextView tv_desc;
     private CheckBox cb_status;
 
-    private  String title;
+    private  String stitle;
     private  String desc_on;
     private  String desc_off;
 
@@ -28,7 +28,8 @@ public class SettingsItemView extends RelativeLayout {
 
     public SettingsItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
-         title = attrs.getAttributeValue(NAMESPACE,"stitle");
+
+         stitle = attrs.getAttributeValue(NAMESPACE,"stitle");
          desc_on = attrs.getAttributeValue(NAMESPACE,"desc_on");
          desc_off = attrs.getAttributeValue(NAMESPACE,"desc_off");
 
@@ -48,7 +49,7 @@ public class SettingsItemView extends RelativeLayout {
         tv_desc = (TextView) findViewById( R.id.tv_desc );
         cb_status = (CheckBox)findViewById( R.id.cb_status );
 
-        set_title( title );
+        set_title( stitle );
 
     }
 

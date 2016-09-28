@@ -9,6 +9,9 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.os.Bundle;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lidroid.xutils.HttpUtils;
@@ -32,13 +35,19 @@ public class SplashActivity extends Activity {
     private String desc = null;
 
     private SharedPreferences sp;
+    private RelativeLayout rl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        rl = (RelativeLayout) findViewById( R.id.rl_root);
+
 
         initView();
+        AlphaAnimation alphaAnimation = new AlphaAnimation(0.2f,1f);
+        alphaAnimation.setDuration(5000);
+        rl.startAnimation(alphaAnimation);
 
     }
 
@@ -54,8 +63,10 @@ public class SplashActivity extends Activity {
         textView.setText( R.string.current_version + PackageUtils.getVersionName(this));
         localVersion = PackageUtils.getVersionCode(this);
 
-        sp = getSharedPreferences("config", MODE_PRIVATE );
-        boolean is_update = sp.getBoolean("is_update",true);
+        sp = getSharedPreferences("config", Activity.MODE_PRIVATE );
+        boolean is_update = false;
+
+        is_update = sp.getBoolean("is_update",false);
 
         if( is_update ) {
             checkVersion();
