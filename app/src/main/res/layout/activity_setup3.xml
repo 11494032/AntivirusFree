@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/TitleTextView"
+        android:gravity="center_vertical"
+        android:text="3 设置安全密码"
+        />
+
+    <TextView
+       style="@style/TextViewItem"
+        android:text="sim 卡发生变化:\n 就会发送短信给安全号码"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择安全号码" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button style="@style/ButtonNext" />
+        <Button style="@style/ButtonPre" />
+    </RelativeLayout>
+</LinearLayout>

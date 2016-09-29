@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/TitleTextView"
+        android:gravity="center_vertical"
+        android:text="1 欢迎使用手机防盗"
+       />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="1.1 您的手机防盗卫士"
+        android:textSize="18sp"/>
+    
+    <TextView
+        style="@style/TextViewItem"
+        android:text="1.2 SIM卡变更报警"/>
+    <TextView
+        style="@style/TextViewItem"
+        android:text="1.3 GPS 追踪" />
+    <TextView
+        style="@style/TextViewItem"
+        android:text="1.4 远程锁屏" />
+
+    <TextView
+        style="@style/TextViewItem"
+        android:text="1.5 远程销毁数据" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <Button
+        style="@style/ButtonNext" />
+    </RelativeLayout>
+
+
+</LinearLayout>

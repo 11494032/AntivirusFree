@@ -5,4 +5,5 @@
         <attr name="desc_on" format="string">自动跟新已经开启</attr>
         <attr name="desc_off" format="string">自动跟新已经关闭</attr>
     </declare-styleable>
+
 </resources>

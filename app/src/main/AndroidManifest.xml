@@ -20,6 +20,9 @@
 
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SetUpActivity1"></activity>
+        <activity android:name=".SetUpActivity2"></activity>
+        <activity android:name=".SetUpActivity3"></activity>
 
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>

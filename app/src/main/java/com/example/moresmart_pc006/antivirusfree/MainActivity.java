@@ -146,7 +146,8 @@ public class MainActivity extends Activity {
                 {
                     Toast.makeText(getApplicationContext(),"密码正确",Toast.LENGTH_LONG).show();
                     alertDialog.dismiss();
-
+                    Intent intent = new Intent(MainActivity.this,SetUpActivity1.class);
+                    startActivity(intent);
                 }
                 else
                 {
