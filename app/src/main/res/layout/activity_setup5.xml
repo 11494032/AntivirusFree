@@ -6,24 +6,15 @@
     <TextView
         style="@style/TitleTextView"
         android:gravity="center_vertical"
-        android:text="3 设置安全密码"
-        />
+        android:text="5 恭喜您设置完成"/>
 
-    <TextView
-       style="@style/TextViewItem"
-        android:text="sim 卡发生变化:\n 就会发送短信给安全号码"
-        android:textSize="18sp"/>
+    <CheckBox
 
-    <EditText
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="输入电话号码"/>
+        android:text="选中开启防盗保护">
 
-    <Button
-        android:id="@+id/bt_contact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="选择安全号码" />
+    </CheckBox>
 
     <RelativeLayout
         android:layout_width="match_parent"

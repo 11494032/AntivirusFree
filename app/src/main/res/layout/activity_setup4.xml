@@ -6,24 +6,24 @@
     <TextView
         style="@style/TitleTextView"
         android:gravity="center_vertical"
-        android:text="3 设置安全密码"
-        />
+        android:text="4 设置安全号码"/>
 
     <TextView
-       style="@style/TextViewItem"
-        android:text="sim 卡发生变化:\n 就会发送短信给安全号码"
-        android:textSize="18sp"/>
+        style="@style/TextViewItem" />
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="输入电话号码"/>
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="激活设备管理员:\n 可以远程锁屏和擦除数据"
+        android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/bt_contact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="选择安全号码" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="选择安全号码" />
+
 
     <RelativeLayout
         android:layout_width="match_parent"
